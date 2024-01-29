@@ -128,14 +128,12 @@ passport.use("jwt", new JwtStrategy(opts, async (jwt_payload, done) => {
 
 passport.serializeUser((user, done) => {
   process.nextTick(function () {
-    console.log('serlizer', user)
     return done(null, { id: user.id, role: user.role })
   })
 })
 
 
 passport.deserializeUser((user, done) => {
-  console.log('deserlizer', user)
   process.nextTick(function () {
     return done(null, user)
   })

@@ -23,7 +23,7 @@ exports.createOrder = async(req,resp)=>{
       selectedAddress:selectedaddress,
       user:Userdeatils
     });
-    console.log(order)
+    
     for(let item of order.items){
         const product = await Product.findOneAndUpdate({_id:item.id},{$inc:{stock:-1*req.body.totalItems}});
        await product.save()
