@@ -8,7 +8,13 @@ exports.search = async(req,resp)=>{
     object.title = {$regex:name,$options:"i"}
     try {
         const products = await Product.find(object);
-    resp.status(200).json(products);
+        if(products.length){
+            resp.status(200).json(products);
+           
+        }else{
+            resp.status(200).json({message:"Product not found"})
+           
+        }
     } catch (error) {
         resp.status(200).json(error);
     }

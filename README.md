@@ -8,7 +8,7 @@
   node index.js
 
 🔥 Features :
-- Basic E-commerce Features- Product lists, Product Details, Cart, Checkout 
+- Basic E-commerce Features- Product lists, Product Details, Cart, Checkout ,,Order Summary , Payment , Order success.
 - Secure Card Payments / Cash payments
 - Admin Panel - Add/Edit Orders. Add/Edit Products
 - Sorting, Filtering, and Pagination queries using Mongoose
