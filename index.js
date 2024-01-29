@@ -144,7 +144,6 @@ passport.deserializeUser((user, done) => {
 
 
 server.get("/payment", (req, resp) => {
-  console.log(req.query)
   let normalpayload = {
     "merchantId": "PGTESTPAYUAT",
     "merchantTransactionId": "MT7850590068188104",
